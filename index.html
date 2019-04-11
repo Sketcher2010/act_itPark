@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+    <script src="jquery.js"></script>
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+        body {
+            background: url("people.jpg") no-repeat fixed center;
+            background-size: cover;
+        }
+        .container {
+            display: none;
+            width: 400px;
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.26);
+            -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.26);
+            box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.26);
+            padding: 15px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            background: white;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Tahoma;
+        }
+
+        .content {
+            margin-top: 10px;
+            font-family: Tahoma;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+        }
+        .btn {
+            padding: 15px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: green;
+            border: 1px solid #006c00;
+            color: #fff;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-transition: background 200ms;
+            -moz-transition: background 200ms;
+            -ms-transition: background 200ms;
+            -o-transition: background 200ms;
+            transition: background 200ms;
+        }
+        .btn:hover {
+            background: #009300;
+        }
+        .btn:active {
+            background: #007000;
+        }
+        .block {
+            background: green;
+            border: 1px solid red;
+            color: white;
+            font-size: 50px;
+        }
+        .wrapper {
+            margin: auto;
+            max-width: 1200px;
+            background: white;
+            -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.26);
+            -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.26);
+            box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.26);
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        @media (max-width: 540px) {
+            .products {
+                flex-direction: column;
+            }
+            .block {
+                margin-bottom: 10px;
+            }
+            .block:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#sendMessage').click(function () {
+                $('.container').fadeIn(300);
+            });
+
+            $(".close").click(function () {
+                $('.container').fadeOut(300);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="products">
+        <div class="block">
+            <div class="title">Товар 1</div>
+            <div class="image"><img src="" alt=""></div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur corporis culpa, deleniti dolores excepturi hic id minus, neque nostrum possimus quisquam, quod repudiandae similique suscipit vero voluptas voluptate voluptates.</div>
+        </div>
+        <div class="block">
+            <div class="title">Товар 1</div>
+            <div class="image"><img src="" alt=""></div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur corporis culpa, deleniti dolores excepturi hic id minus, neque nostrum possimus quisquam, quod repudiandae similique suscipit vero voluptas voluptate voluptates.</div>
+        </div>
+        <div class="block">
+            <div class="title">Товар 1</div>
+            <div class="image"><img src="" alt=""></div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur corporis culpa, deleniti dolores excepturi hic id minus, neque nostrum possimus quisquam, quod repudiandae similique suscipit vero voluptas voluptate voluptates.</div>
+        </div>
+    </div>
+    <div class="products">
+        <div class="block">
+            <div class="title">Товар 1</div>
+            <div class="image"><img src="" alt=""></div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur corporis culpa, deleniti dolores excepturi hic id minus, neque nostrum possimus quisquam, quod repudiandae similique suscipit vero voluptas voluptate voluptates.</div>
+        </div>
+        <div class="block">
+            <div class="title">Товар 1</div>
+            <div class="image"><img src="" alt=""></div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur corporis culpa, deleniti dolores excepturi hic id minus, neque nostrum possimus quisquam, quod repudiandae similique suscipit vero voluptas voluptate voluptates.</div>
+        </div>
+        <div class="block">
+            <div class="title">Товар 1</div>
+            <div class="image"><img src="" alt=""></div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur corporis culpa, deleniti dolores excepturi hic id minus, neque nostrum possimus quisquam, quod repudiandae similique suscipit vero voluptas voluptate voluptates.</div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="btn" id="sendMessage">Отправить</div>-->
+<!--<div class="container">-->
+<!--    <div class="close">X</div>-->
+<!--    <div class="title">Заголовок блока</div>-->
+<!--    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, blanditiis consectetur-->
+<!--        doloremque dolores doloribus explicabo facilis, labore nam nostrum obcaecati odit officia, officiis qui-->
+<!--        reiciendis saepe similique sit vel voluptas.-->
+<!--    </div>-->
+<!--</div>-->
+</body>
+</html>
