@@ -21,7 +21,8 @@ $login = $_POST["login"];
 $pass = $_POST["password"];
 
 foreach ($users as $profile) {
-    if($profile["login"] == $login and $profile["password"] == $pass) {
+    if($profile["login"] == $login
+        and $profile["password"] == $pass) {
         $_SESSION["isAuth"] = true;
         $_SESSION["user"] = $profile;
         break;

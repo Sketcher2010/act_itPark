@@ -4,6 +4,7 @@ $hello = "Hello world!";    // String
 $one = 1;                   // Integer
 $half = 0.5;                // Float/Double
 $true = true;               // Boolean
+$false = false;
 
 $arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); // Array
 $numbers = array();
